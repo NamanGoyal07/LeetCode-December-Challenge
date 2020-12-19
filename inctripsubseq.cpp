@@ -22,3 +22,22 @@ public:
         return f;
     }
 };
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+class Solution {
+public:
+    bool increasingTriplet(vector<int>& nums) {
+        int n=nums.size();
+        int mi1= INT_MAX, mi2 = INT_MAX;
+        for(int i=0;i<n;i++){
+            if(nums[i]<=mi1){
+                mi1=nums[i];
+            }
+            else if(nums[i]<=mi2){
+                mi2=nums[i];
+            }
+            else return 1;
+        }
+        return 0;
+    }
+};
